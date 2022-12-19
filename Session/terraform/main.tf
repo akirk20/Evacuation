@@ -7,7 +7,6 @@ terraform {
     }
 }
 
-#### DOCKER 
 provider docker {}
 
 resource docker_image backend_image {
@@ -31,6 +30,7 @@ resource docker_image frontend_image {
 
 resource docker_image mongo_image {
     name = "mongo:latest"
+
 }
 
 resource docker_image redis_image {
@@ -69,7 +69,7 @@ resource docker_container mongo_container {
 
 resource docker_container backend_container {
     name = "backend-container"
-    image = "sdu-evac-backend"
+    image = "sdu-evac-backend:terraform"
     ports {
         internal = "80"
         external = "3000"
@@ -88,7 +88,7 @@ resource docker_container backend_container {
 
 resource docker_container frontend_container {
     name = "frontend-container"
-    image = "sdu-evac-frontend"
+    image = "sdu-evac-frontend:terraform"
     ports {
         internal = "80"
         external = "3002"
