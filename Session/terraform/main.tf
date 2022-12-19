@@ -5,8 +5,31 @@ terraform {
             version = "~> 2.13.0"
         }
     }
+    backend "gcs" {
+        bucket = "deft-racer-364714-tfstate"
+        prefix = "terraform/state"
+    }
 }
 
+
+### GOOGLE 
+provider "google" {
+  project = var.project_id
+  region  = var.region
+}
+
+resource "google_storage_bucket" "bucket" {
+  name     = "test-bucket-1"
+  location = "europe-west1"
+}
+
+resource "google_storage_bucket" "gcs_bucket" {
+  name     = "test-bucket-gcs"
+  location = "europe-west1"
+}
+
+
+#### DOCKER 
 provider docker {}
 
 resource docker_image backend_image {
