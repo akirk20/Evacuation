@@ -5,10 +5,7 @@ terraform {
             version = "~> 2.13.0"
         }
     }
-    backend "gcs" {
-        bucket = "deft-racer-364714-tfstate"
-        prefix = "terraform/state"
-    }
+    
 }
 
 
