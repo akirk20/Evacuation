@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=dev
+      - MONGO_DB_CONNECTION_STRING=mongodb+srv://akirk20:R712HfLiQuMAZKWv@cluster0.cfoqsha.mongodb.net/?retryWrites=true&w=majority
+      - MONGO_DB_NAME=CloudProjectDB
+      - REDIS_URI=default:GZjFApP6G14dVs3cod3Xb0TBh8KxBg43@redis-13602.c228.us-central1-1.gce.cloud.redislabs.com:13602
+      
+      
