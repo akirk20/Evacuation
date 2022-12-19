@@ -5,26 +5,7 @@ terraform {
             version = "~> 2.13.0"
         }
     }
-    
 }
-
-
-### GOOGLE 
-provider "google" {
-  project = var.project_id
-  region  = var.region
-}
-
-resource "google_storage_bucket" "bucket" {
-  name     = "test-bucket-1"
-  location = "europe-west1"
-}
-
-resource "google_storage_bucket" "gcs_bucket" {
-  name     = "test-bucket-gcs"
-  location = "europe-west1"
-}
-
 
 #### DOCKER 
 provider docker {}
