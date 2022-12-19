@@ -2,7 +2,7 @@ terraform {
     required_providers {
         docker = {
             source  = "kreuzwerker/docker"
-            version = "~> 2.13.0"
+            version = "~> 2.23.0"
         }
     }
 }
@@ -69,7 +69,7 @@ resource docker_container mongo_container {
 
 resource docker_container backend_container {
     name = "backend-container"
-    image = docker_image.backend_image.image_id
+    image = backend_image.image_id
     ports {
         internal = "80"
         external = "3000"
@@ -88,7 +88,7 @@ resource docker_container backend_container {
 
 resource docker_container frontend_container {
     name = "frontend-container"
-    image = docker.frontend_image.image_id
+    image = frontend_image.image_id
     ports {
         internal = "80"
         external = "3002"
