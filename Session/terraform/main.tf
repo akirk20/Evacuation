@@ -69,7 +69,7 @@ resource docker_container mongo_container {
 
 resource docker_container backend_container {
     name = "backend-container"
-    image = docker_image.backend_image.id
+    image = docker_image.backend_image.image_id
     ports {
         internal = "80"
         external = "3000"
@@ -88,7 +88,7 @@ resource docker_container backend_container {
 
 resource docker_container frontend_container {
     name = "frontend-container"
-    image = docker_image.frontend_image.id
+    image = docker.frontend_image.image_id
     ports {
         internal = "80"
         external = "3002"
