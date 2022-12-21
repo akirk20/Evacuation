@@ -15,5 +15,5 @@ spec:
         app: sdu-evac-frontend
     spec:
       containers:
-      - image: europe-west1-docker.pkg.dev/deft-racer-364714/evac-registry/evac-frontend-image
+      - image: evac-frontend-image
         name: sdu-evac-frontend

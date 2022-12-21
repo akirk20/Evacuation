@@ -15,7 +15,7 @@ spec:
         app: sdu-evac-backend
     spec:
       containers:
-      - image: europe-west1-docker.pkg.dev/deft-racer-364714/evac-registry/evac-backend-image
+      - image: evac-backend-image
         name: sdu-evac-backend
         env:
         - name: PORT
