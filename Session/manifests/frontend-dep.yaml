@@ -15,5 +15,5 @@ spec:
         app: sdu-evac-frontend
     spec:
       containers:
-      - image: sdu-evac-frontend:latest
+      - image: europe-west1-docker.pkg.dev/sdu-evacuation-project/evac-registry/sdu-evac-frontend:v0.1.0 
         name: sdu-evac-frontend

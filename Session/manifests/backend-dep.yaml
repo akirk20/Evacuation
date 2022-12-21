@@ -15,7 +15,7 @@ spec:
         app: sdu-evac-backend
     spec:
       containers:
-      - image: sdu-evac-backend:latest
+      - image: europe-west1-docker.pkg.dev/sdu-evacuation-project/evac-registry/sdu-evac-backend:v0.1.0
         name: sdu-evac-backend
         env:
         - name: PORT
