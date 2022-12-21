@@ -12,6 +12,6 @@ spec:
     targetPort: 80
   selector:
     app: sdu-evac-frontend
-  type: ClusterIP # loadbalancer 
+  type: LoadBalancer
 
 
