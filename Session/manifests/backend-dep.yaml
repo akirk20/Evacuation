@@ -21,8 +21,8 @@ spec:
         - name: PORT
           value: "80"
         - name: MONGO_DB_CONNECTION_STRING
-          value: mongodb://mongodb:27017
+          value: mongodb+srv://akirk20:R712HfLiQuMAZKWv@cluster0.cfoqsha.mongodb.net/?retryWrites=true&w=majority
         - name: MONGO_DB_NAME
-          value: sdu-evac
+          value: CloudProjectDB
         - name: REDIS_URI
-          value: redis://redis-master
+          value: default:GZjFApP6G14dVs3cod3Xb0TBh8KxBg43@redis-13602.c228.us-central1-1.gce.cloud.redislabs.com:13602
