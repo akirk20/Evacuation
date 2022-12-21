@@ -1,5 +1,5 @@
 const constansts = {
-    serverBaseURL: 'http://localhost:3000' // external ip på en af backend noderne som jeg bruger
+    serverBaseURL: 'http://35.205.83.138:3000' // external ip på CLUSTERET
 }
 
 export default constansts;
