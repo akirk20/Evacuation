@@ -15,5 +15,5 @@ spec:
         app: sdu-evac-frontend
     spec:
       containers:
-      - image: evac-frontend-image
+      - image: sdu-evac-frontend:latest
         name: sdu-evac-frontend

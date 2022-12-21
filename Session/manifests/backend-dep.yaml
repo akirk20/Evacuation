@@ -15,7 +15,7 @@ spec:
         app: sdu-evac-backend
     spec:
       containers:
-      - image: evac-backend-image
+      - image: sdu-evac-backend:latest
         name: sdu-evac-backend
         env:
         - name: PORT
