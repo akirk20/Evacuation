@@ -3,7 +3,7 @@ FROM node:15.4.0
 COPY . /app
 WORKDIR /app
 
-EXPOSE 80
+EXPOSE 3000
 
 RUN npm install
 
