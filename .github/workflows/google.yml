@@ -37,6 +37,10 @@ jobs:
     # install helm 
     - name: Helm tool installer
       uses: Azure/setup-helm@v3
+
+    # add bitnami 
+    - name: bitnami
+      run: helm repo add bitnami https://charts.bitnami.com/bitnami
     
     # install mongodb 
     - name: mongodb
