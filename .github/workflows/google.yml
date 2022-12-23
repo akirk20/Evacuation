@@ -40,11 +40,11 @@ jobs:
     
     # install mongodb 
     - name: mongodb
-    - run: helm install mongodb bitnami/mongodb --set image.tag=latest --set persistence.mountPath=/data/db
+      run: helm install mongodb bitnami/mongodb --set image.tag=latest --set persistence.mountPath=/data/db
     
     # install redis
     - name: redis server
-    - run: helm install redis bitnami/redis --set architecture=standalone --set auth.enabled=false
+      run: helm install redis bitnami/redis --set architecture=standalone --set auth.enabled=false
     
     - name: Docker configuration
       run: |-
